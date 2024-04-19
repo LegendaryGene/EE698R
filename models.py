@@ -21,10 +21,10 @@ class Encoder(nn.Module):
     self.conv3=nn.Conv2d(128,256,5,padding=2,stride=2)
     self.bn3=nn.BatchNorm2d(256,momentum=0.9)
     self.relu=nn.LeakyReLU(0.2)
-    self.fc1=nn.Linear(256*32*16,2048)
-    self.bn4=nn.BatchNorm1d(2048,momentum=0.9)
-    self.fc_mean=nn.Linear(2048,256)
-    self.fc_logvar=nn.Linear(2048,256)   #latent dim=128
+    self.fc1=nn.Linear(256*32*16,1024)
+    self.bn4=nn.BatchNorm1d(1024,momentum=0.9)
+    self.fc_mean=nn.Linear(1024,256)
+    self.fc_logvar=nn.Linear(1024,256)   #latent dim=128
   
   def forward(self,x):
     batch_size=x.size()[0]

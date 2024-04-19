@@ -1,0 +1,1 @@
+This repository houses my code for the course project of EE698R (2023-24-2). A simple implementation of the 2016 paper "Autoencoding beyond pixels using a learned similarity metric" in pyTorch, and an extension of the model for the recent DeepFashion dataset as an addition.
